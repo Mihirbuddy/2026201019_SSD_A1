@@ -1,4 +1,9 @@
 function Profile({ currentUser }) {
+
+  const description =
+    currentUser.role === "student"
+      ? "This is your student profile."
+      : "This is your teacher profile.";
   return (
     <div className="page">
       <h1>Profile</h1>
@@ -13,6 +18,8 @@ function Profile({ currentUser }) {
         <p>
           <strong>Email:</strong> {currentUser.email}
         </p>
+
+        <p>{description}</p>
       </div>
     </div>
   );
