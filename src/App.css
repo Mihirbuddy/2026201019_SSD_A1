@@ -87,3 +87,33 @@ select {
   padding-top: 15px;
   border-top: 1px solid #ddd;
 }
+
+.user-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.user-card {
+  width: 250px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.profile-card {
+  width: 350px;
+  padding: 20px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+.settings-form {
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
