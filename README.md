@@ -10,3 +10,16 @@ There are two types of users:
 - Teacher
 
 The project uses dummy data and does not have a backend or database.
+
+## Features
+
+The project has the following basic features:
+
+- Student and teacher login
+- Dashboard
+- Profile page
+- Settings page
+- Change user name
+- View students and teachers
+
+The dashboard is available for both students and teachers.
