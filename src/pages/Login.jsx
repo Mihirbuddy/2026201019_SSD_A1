@@ -10,8 +10,7 @@ function Login({ onLogin }) {
 
     const user = users.find(
       (user) =>
-        user.name.toLowerCase() === name.toLowerCase() &&
-        user.role === role
+        user.name.toLowerCase() === name.toLowerCase() && user.role === role,
     );
 
     if (!user) {
@@ -21,7 +20,6 @@ function Login({ onLogin }) {
 
     onLogin(user);
   }
-
   return (
     <div className="login-page">
       <div className="login-box">
@@ -57,8 +55,12 @@ function Login({ onLogin }) {
 
           <p>Student: Rahul Sharma</p>
           <p>Student: Priya Verma</p>
+          <p>Student: Neha Kapoor</p>
+          <p>Student: Arjun Malhotra</p>
           <p>Teacher: Dr. Mehta</p>
           <p>Teacher: Dr. Sharma</p>
+          <p>Teacher: Prof. Kapoor</p>
+          <p>Teacher: Prof. Iyer</p>
         </div>
       </div>
     </div>
