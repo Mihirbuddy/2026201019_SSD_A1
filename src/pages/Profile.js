@@ -27,6 +27,20 @@ function Profile({ currentUser }) {
         </p>
 
         <p>{description}</p>
+
+        <hr />
+
+        <h3>Profile Summary</h3>
+
+        <p>
+          Welcome to the Student Teacher Portal. You are currently logged in
+          as a {currentUser.role}.
+        </p>
+
+        <p>
+          You can use the dashboard to view other users and the settings
+          section to update your profile name.
+        </p>
       </div>
     </div>
   );
