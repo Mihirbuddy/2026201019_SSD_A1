@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 function Login({ onLogin }) {
+
+  const [name, setName] = useState("");
+const [role, setRole] = useState("student");
   return (
     <div className="login-page">
       <div className="login-box">
@@ -10,13 +15,18 @@ function Login({ onLogin }) {
           <label>Name</label>
 
           <input
-            type="text"
-            placeholder="Enter your name"
-          />
+          type="text"
+          value={name}
+          onChange={(event) => setName(event.target.value)}
+          placeholder="Enter your name"
+        />
 
           <label>Role</label>
 
-          <select>
+          <select
+          value={role}
+          onChange={(event) => setRole(event.target.value)}
+        >
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
           </select>
