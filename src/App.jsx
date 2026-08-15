@@ -21,6 +21,13 @@ function App() {
     setCurrentPage("dashboard");
   }
 
+  function handleNameChange(newName) {
+    setCurrentUser({
+      ...currentUser,
+      name: newName,
+    });
+  }
+
   if (!currentUser) {
     return <Login onLogin={handleLogin} />;
   }
@@ -42,7 +49,10 @@ function App() {
       )}
 
       {currentPage === "settings" && (
-        <Settings currentUser={currentUser} />
+        <Settings
+          currentUser={currentUser}
+          onNameChange={handleNameChange}
+        />
       )}
     </>
   );
