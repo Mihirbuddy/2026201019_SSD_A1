@@ -31,3 +31,24 @@ select {
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.navbar {
+  padding: 15px 30px;
+  background: #222;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.navbar h2 {
+  margin-right: auto;
+}
+
+.navbar button {
+  margin-left: 5px;
+}
+
+.navbar p {
+  margin-left: 10px;
+}
