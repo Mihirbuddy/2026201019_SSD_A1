@@ -1,4 +1,5 @@
 import { users } from "../data/users";
+import UserCard from "../components/UserCard";
 
 function Dashboard({ currentUser }) {
 
@@ -14,10 +15,20 @@ function Dashboard({ currentUser }) {
 
       <section>
         <h2>Students</h2>
+        <div className="user-list">
+          {students.map((student) => (
+            <UserCard key={student.id} user={student} />
+          ))}
+        </div>
       </section>
 
       <section>
         <h2>Teachers</h2>
+        <div className="user-list">
+          {teachers.map((teacher) => (
+            <UserCard key={teacher.id} user={teacher} />
+          ))}
+        </div>
       </section>
     </div>
   );
