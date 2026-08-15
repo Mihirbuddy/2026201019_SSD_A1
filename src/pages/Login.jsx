@@ -1,9 +1,29 @@
 import { useState } from "react";
+import { users } from "../data/users";
 
 function Login({ onLogin }) {
 
+  
+
   const [name, setName] = useState("");
 const [role, setRole] = useState("student");
+
+function handleLogin(event) {
+  event.preventDefault();
+
+  const user = users.find(
+    (user) =>
+      user.name.toLowerCase() === name.toLowerCase() &&
+      user.role === role
+  );
+
+  if (!user) {
+    alert("User not found. Try one of the names shown below.");
+    return;
+  }
+
+  onLogin(user);
+}
   return (
     <div className="login-page">
       <div className="login-box">
@@ -11,7 +31,7 @@ const [role, setRole] = useState("student");
 
         <h2>Login</h2>
 
-        <form>
+        <form onSubmit={handleLogin}>
           <label>Name</label>
 
           <input
