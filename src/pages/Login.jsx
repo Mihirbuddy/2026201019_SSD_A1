@@ -2,28 +2,24 @@ import { useState } from "react";
 import { users } from "../data/users";
 
 function Login({ onLogin }) {
-
-  
-
   const [name, setName] = useState("");
-const [role, setRole] = useState("student");
+  const [role, setRole] = useState("student");
 
-function handleLogin(event) {
-  event.preventDefault();
+  function handleLogin(event) {
+    event.preventDefault();
 
-  const user = users.find(
-    (user) =>
-      user.name.toLowerCase() === name.toLowerCase() &&
-      user.role === role
-  );
+    const user = users.find(
+      (user) =>
+        user.name.toLowerCase() === name.toLowerCase() && user.role === role,
+    );
 
-  if (!user) {
-    alert("User not found. Try one of the names shown below.");
-    return;
+    if (!user) {
+      alert("User not found. Try one of the names shown below.");
+      return;
+    }
+
+    onLogin(user);
   }
-
-  onLogin(user);
-}
   return (
     <div className="login-page">
       <div className="login-box">
@@ -35,18 +31,18 @@ function handleLogin(event) {
           <label>Name</label>
 
           <input
-          type="text"
-          value={name}
-          onChange={(event) => setName(event.target.value)}
-          placeholder="Enter your name"
-        />
+            type="text"
+            value={name}
+            onChange={(event) => setName(event.target.value)}
+            placeholder="Enter your name"
+          />
 
           <label>Role</label>
 
           <select
-          value={role}
-          onChange={(event) => setRole(event.target.value)}
-        >
+            value={role}
+            onChange={(event) => setRole(event.target.value)}
+          >
             <option value="student">Student</option>
             <option value="teacher">Teacher</option>
           </select>
@@ -59,8 +55,12 @@ function handleLogin(event) {
 
           <p>Student: Rahul Sharma</p>
           <p>Student: Priya Verma</p>
+          <p>Student: Neha Kapoor</p>
+          <p>Student: Arjun Malhotra</p>
           <p>Teacher: Dr. Mehta</p>
           <p>Teacher: Dr. Sharma</p>
+          <p>Teacher: Prof. Kapoor</p>
+          <p>Teacher: Prof. Iyer</p>
         </div>
       </div>
     </div>
