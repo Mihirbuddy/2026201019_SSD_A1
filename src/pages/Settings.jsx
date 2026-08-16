@@ -18,6 +18,7 @@ function Settings({ currentUser, onNameChange }) {
   return (
     <div className="page">
       <h1>Settings</h1>
+      <p>Profile settings are being updated.</p>
 
       <form className="settings-form" onSubmit={handleSubmit}>
         <label>Change your name</label>
