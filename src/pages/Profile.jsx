@@ -30,7 +30,7 @@ function Profile({ currentUser }) {
 
         <hr />
 
-        <h3>Profile Summary</h3>
+        <h3>This is your Profile Summary</h3>
 
         <p>
           Welcome to the Student Teacher Portal. You are currently logged in
